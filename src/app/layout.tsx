@@ -4,6 +4,7 @@ import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
 import Providers from './providers';
 import { ClerkProvider } from '@clerk/nextjs';
+import { Toaster } from 'sonner';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <body className={`${dmSans.className}`}>
           <Providers>
             <div className="root-layout">{children}</div>
+            <Toaster richColors closeButton />
           </Providers>
         </body>
       </html>
