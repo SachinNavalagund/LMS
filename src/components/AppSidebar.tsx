@@ -4,6 +4,7 @@ import React from 'react';
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -14,6 +15,7 @@ import {
   BookOpen,
   Briefcase,
   DollarSign,
+  LogOut,
   PanelLeft,
   Settings,
   User,
@@ -61,7 +63,7 @@ const AppSidebar = () => {
           <SidebarMenuItem>
             <SidebarMenuButton
               size="lg"
-              onClick={() => toggleSidebar}
+              onClick={() => toggleSidebar()}
               className="group hover:bg-customgreys-secondarybg"
             >
               <div className="app-sidebar__logo-container group">
@@ -104,23 +106,40 @@ const AppSidebar = () => {
                   <Link href={link.href} className="app-sidebar__nav-link">
                     <link.icon
                       className={isActive ? 'text-white-50' : 'text-gray-500'}
+                    />
+                    <span
+                      className={cn(
+                        'app-sidebar__nav-text',
+                        isActive ? 'text-white-50' : 'text-gray-500'
+                      )}
                     >
-                      <span
-                        className={cn(
-                          'app-sidebar__nav-text',
-                          isActive ? 'text-white-50' : 'text-gray-500'
-                        )}
-                      >
-                        {link.label}
-                      </span>
-                    </link.icon>
+                      {link.label}
+                    </span>
                   </Link>
                 </SidebarMenuButton>
+                {isActive && (
+                  <div className="app-sidebar__active-indicator"></div>
+                )}
               </SidebarMenuItem>
             );
           })}
         </SidebarMenu>
       </SidebarContent>
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <button
+                onClick={() => signOut()}
+                className="app-sidebar__signout"
+              >
+                <LogOut className="mr-2 h-6 w-6" />
+                <span>Sign out</span>
+              </button>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   );
 };
