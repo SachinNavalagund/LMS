@@ -500,15 +500,15 @@ input[type='color'] {
 }
 
 .billing__select {
-  @apply w-[180px] border-none bg-customgreys-primarybg;
+  @apply z-50 w-[180px] border-none bg-customgreys-primarybg;
 }
 
 .billing__select-content {
-  @apply bg-customgreys-primarybg;
+  @apply z-50 -ml-4 mt-10 w-[180px] rounded-md border border-gray-400 bg-customgreys-primarybg;
 }
 
 .billing__select-item {
-  @apply cursor-pointer hover:!bg-white-50 hover:!text-customgreys-primarybg;
+  @apply m-1 w-[164px] cursor-pointer hover:!bg-white-50 hover:!text-customgreys-primarybg;
 }
 
 .billing__grid {
@@ -520,7 +520,7 @@ input[type='color'] {
 }
 
 .billing__table {
-  @apply min-h-[200px] text-customgreys-dirtyGrey;
+  @apply z-0 min-h-[200px] text-customgreys-dirtyGrey;
 }
 
 .billing__table-header {
@@ -532,7 +532,7 @@ input[type='color'] {
 }
 
 .billing__table-cell {
-  @apply border-none p-4;
+  @apply border-none p-4 text-white-50/90;
 }
 
 .billing__table-row {
