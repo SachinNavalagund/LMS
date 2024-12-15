@@ -219,7 +219,7 @@ input[type='color'] {
 
 /* Completion Page */
 .completion {
-  @apply flex h-full flex-col items-center justify-center bg-background text-foreground;
+  @apply flex h-full flex-col items-center justify-center text-foreground text-white-50;
 }
 
 .completion__content {
@@ -239,7 +239,7 @@ input[type='color'] {
 }
 
 .completion__action {
-  @apply mt-2 flex cursor-pointer justify-center rounded-lg bg-secondary-700 px-4 py-2 hover:bg-secondary-600;
+  @apply mt-2 flex cursor-pointer justify-center rounded-lg bg-secondary-700 px-4 py-2 text-black hover:bg-secondary-600;
 }
 
 /* Landing Page */
