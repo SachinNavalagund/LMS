@@ -85,7 +85,7 @@ const AppSidebar = () => {
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu className="app-sidebar__nav-menu">
-          {currentNavLinks.map((link) => {
+          {currentNavLinks?.map((link) => {
             const isActive = pathname.startsWith(link.href);
             return (
               <SidebarMenuItem

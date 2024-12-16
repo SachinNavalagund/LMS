@@ -13,7 +13,7 @@ const NavBar = ({ isCoursePage }: { isCoursePage: boolean }) => {
 
   const userRole = user?.publicMetadata.userType as 'student' | 'teacher';
 
-  console.log('User role', user?.publicMetadata.userType);
+  console.log('User role', userRole);
   return (
     <nav className="dashboard-navbar">
       <div className="dashboard-navbar__container">
