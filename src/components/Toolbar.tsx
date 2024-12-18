@@ -32,7 +32,10 @@ const Toolbar = ({ onSearch, onCategoryChange }: ToolbarProps) => {
         </SelectTrigger>
 
         <SelectContent className="bg-customgreys-primarybg hover:bg-customgreys-primarybg">
-          <SelectItem value="all" className="toolbar__search-item">
+          <SelectItem
+            value="all"
+            className="toolbar__search-item text-white-50"
+          >
             All Categories
           </SelectItem>
 
@@ -40,7 +43,7 @@ const Toolbar = ({ onSearch, onCategoryChange }: ToolbarProps) => {
             <SelectItem
               key={category.value}
               value={category.value}
-              className="toolbar__search-item"
+              className="toolbar__search-item text-white-50"
             >
               {category.label}
             </SelectItem>

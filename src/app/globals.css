@@ -1159,11 +1159,11 @@ input[type='color'] {
 }
 
 .toolbar__select {
-  @apply h-12 w-[180px] border-none bg-customgreys-primarybg text-customgreys-dirtyGrey;
+  @apply h-12 border-none bg-customgreys-primarybg hover:!text-customgreys-darkGrey;
 }
 
 .toolbar__select-item {
-  @apply cursor-pointer hover:!bg-gray-100 hover:!text-customgreys-darkGrey;
+  @apply cursor-pointer text-white-50 hover:!bg-gray-100 hover:!text-customgreys-darkGrey;
 }
 
 /* Wizard Stepper */

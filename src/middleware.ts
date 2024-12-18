@@ -18,7 +18,7 @@ export default clerkMiddleware(async (auth, request) => {
 
   const userRole =
     (sessionClaims?.metadata as { userType: 'teacher' | 'student' })
-      ?.userType || 'student';
+      ?.userType || 'teacher';
 
   console.log('USER ROLE', userRole);
 
