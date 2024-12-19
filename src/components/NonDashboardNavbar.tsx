@@ -7,10 +7,8 @@ import Link from 'next/link';
 
 const NonDashboardNavbar = () => {
   const { user } = useUser();
-
   const userRole = user?.publicMetadata.userType as 'student' | 'teacher';
 
-  console.log(userRole);
   return (
     <nav className="nondashboard-navbar">
       <div className="nondashboard-navbar__container">
@@ -48,7 +46,7 @@ const NonDashboardNavbar = () => {
               appearance={{
                 baseTheme: dark,
                 elements: {
-                  userButtonOuterIdentifier: 'text-cursor',
+                  userButtonOuterIdentifier: 'text-customgreys-dirtyGrey',
                   userButtonBox: 'scale-90 sm:scale-100',
                 },
               }}
