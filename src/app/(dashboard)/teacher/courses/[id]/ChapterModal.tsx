@@ -165,7 +165,12 @@ const ChapterModal = () => {
             />
 
             <div className="chapter-modal__actions">
-              <Button type="button" variant="outline" onClick={onClose}>
+              <Button
+                type="button"
+                variant="outline"
+                className="text-black hover:bg-zinc-300"
+                onClick={onClose}
+              >
                 Cancel
               </Button>
               <Button type="submit" className="bg-primary-700">

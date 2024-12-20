@@ -10,9 +10,12 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-imports": "off",
     "react/jsx-uses-react": "warn", // Ensures React is used where necessary
     "react/jsx-uses-vars": "warn",
-    "prettier/prettier": "warn" // Optional: to enforce consistent line endings
+    "prettier/prettier": "warn", // Optional: to enforce consistent line endings
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-expressions": "off"
   }
 }

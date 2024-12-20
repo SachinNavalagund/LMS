@@ -1,6 +1,6 @@
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, Suspense } from 'react';
 import { Metadata } from 'next';
 import Providers from './providers';
 import { ClerkProvider } from '@clerk/nextjs';
@@ -27,7 +27,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${dmSans.className}`}>
           <Providers>
-            <div className="root-layout">{children}</div>
+            <Suspense fallback={null}>
+              <div className="root-layout">{children}</div>
+            </Suspense>
             <Toaster richColors closeButton />
           </Providers>
         </body>

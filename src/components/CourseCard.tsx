@@ -4,17 +4,17 @@ import {
   CardContent,
   CardTitle,
   CardFooter,
-} from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import Image from "next/image";
-import { formatPrice } from "@/lib/utils";
+} from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import Image from 'next/image';
+import { formatPrice } from '@/lib/utils';
 
 const CourseCard = ({ course, onGoToCourse }: CourseCardProps) => {
   return (
     <Card className="course-card group" onClick={() => onGoToCourse(course)}>
       <CardHeader className="course-card__header">
         <Image
-          src={course.image || "/placeholder.png"}
+          src={course.image || '/placeholder.png'}
           alt={course.title}
           width={400}
           height={350}
@@ -23,12 +23,12 @@ const CourseCard = ({ course, onGoToCourse }: CourseCardProps) => {
         />
       </CardHeader>
       <CardContent className="course-card__content">
-        <CardTitle className="course-card__title">
+        <CardTitle className="course-card__title text-white-50">
           {course.title}: {course.description}
         </CardTitle>
 
         <div className="flex items-center gap-2">
-          <Avatar className="w-6 h-6">
+          <Avatar className="h-6 w-6">
             <AvatarImage alt={course.teacherName} />
             <AvatarFallback className="bg-secondary-700 text-black">
               {course.teacherName[0]}
