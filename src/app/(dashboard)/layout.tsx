@@ -16,6 +16,10 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const [courseId, setCourseId] = useState<string | null>(null);
   const { user, isLoaded } = useUser();
 
+  // /* eslint-disable no-useless-escape */
+  // const isCoursePage = /^\/user\/courses\/[^\/]+(?:\/chapters\/[^\/]+)?$/.test(
+  //   pathname
+  // );
   /* eslint-disable no-useless-escape */
   const isCoursePage = /^\/user\/courses\/[^\/]+(?:\/chapters\/[^\/]+)?$/.test(
     pathname

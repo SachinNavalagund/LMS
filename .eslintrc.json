@@ -9,6 +9,7 @@
   ],
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "no-useless-escape": "off",
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
     "react/react-in-jsx-scope": "off",
