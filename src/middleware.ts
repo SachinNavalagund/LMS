@@ -9,7 +9,7 @@ export default clerkMiddleware(async (auth, req) => {
 
   const userRole =
     (sessionClaims?.metadata as { userType: 'student' | 'teacher' })
-      ?.userType || 'student';
+      ?.userType || 'teacher';
 
   if (isTeacherRoute(req)) {
     if (userRole !== 'teacher') {
