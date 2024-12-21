@@ -9,6 +9,8 @@
   ],
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     "react/react-in-jsx-scope": "off",
     "unused-imports/no-unused-imports": "off",
     "react/jsx-uses-react": "warn", // Ensures React is used where necessary
